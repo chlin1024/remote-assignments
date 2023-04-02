@@ -11,7 +11,7 @@ function countAandB(input){
       bCount++;
     }
   }
-  console.log(`${aCount} 'a' letters and ${bCount} 'b' letters`)
+  return `${aCount} 'a' letters and ${bCount} 'b' letters`;
 }
 
 function toNumber(input){
@@ -22,7 +22,7 @@ function toNumber(input){
       numArr.push(charCode); 
       }
   }
-  console.log(numArr);
+  return numArr;
 }
 let input1 = ['a', 'b', 'c', 'a', 'c', 'a', 'c'];
 console.log(countAandB(input1));

@@ -11,7 +11,7 @@ function countAandB(input){
       bCount++;
     }
   }
-  return `${aCount} 'a' letters and ${bCount} 'b' letters`;
+  return aCount+bCount;
 }
 
 function toNumber(input){

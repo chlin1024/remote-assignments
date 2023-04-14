@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>HTTP Request by AJAX wht is the sum</h1>
+        <input id=number>
+        <button onclick="calculateSum()">sumbit</button>
+        <p id='result'> </p>
+        <script>
+            function calculateSum() {
+            const number = document.getElementById('number').value;
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('result').textContent = xhr.responseText;
+                }
+            }
+            xhr.open('GET',`http://localhost:3000/data?number=${number}`);
+            xhr.send();
+        }
+        </script>
+    </body>
+    
+</html>

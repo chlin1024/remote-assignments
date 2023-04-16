@@ -11,7 +11,7 @@ app.get('/data', (req, res) => {
     let data = req.query.number;
     if (!data) {
       res.send('Lack of Paraments');
-    } else if (isNaN(data)) {
+    } else if (isNaN(data) || data < 0) { // edit if number is negative is illegal
       res.send('Wrong Paraments');
     } else {
       let n = Number(data);
@@ -47,5 +47,5 @@ app.get('/trackName', (req, res) => {
 // Listening to client request
 app.listen(3000, () => {
     console.log(`The application is runnning on Localhost:${port}`);
-    console.log(`Listening to request on${port}`);
+    console.log(`Listening to request on ${port}`);
 });

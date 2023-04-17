@@ -9,9 +9,9 @@
   "author": "phoebelin",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "express": "^4.18.2"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chlin1024/remote-assignments.git"

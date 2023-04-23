@@ -1,0 +1,21 @@
+doctype html 
+html(lang="en")
+    head
+    
+    body
+        h1 Log-in Page this is pug 
+        h3= error
+        form(action="/sign-in", method="post")
+            h5 Enter to log-in
+            label(for="email") Email:
+            input(type="text", id="email", name="email")
+            label(for="password") Password:
+            input(type="password", id="password", name="password")
+            button(type="submit") Sign in
+        form(action="/sign-up", method="post")
+            h5 Sign up here if you are new!
+            label(for="signup-email") Email:
+            input(type="text", id="signup-email", name="signup-email")
+            label(for="signup-password") Password:
+            input(type="password", id="signup-password", name="signup-password")
+            button(type="submit") Sign up

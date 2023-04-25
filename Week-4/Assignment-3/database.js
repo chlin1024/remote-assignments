@@ -1,17 +1,36 @@
-//import mysql from 'mysql2';
-//const mysql = require('mysql2');
+const mysql = require('mysql2');
 
 
-/*const pool = mysql.createPool({
+const pool = mysql.createPool({
     host: '127.0.0.1',
     user: 'root',
     password: 'sef97jil',
     database: 'assignment'
-}).promis
+})
+//const query = ''
+pool.query(
+  'SELECT * FROM user WHERE email = ?',
+  ['kate8988@gmail.com'],
+  function(err, result) {
+    console.log(result);
+  }
+);
 
+/*pool.query(
+  "DELETE FROM user WHERE email = 'jids@gmail.com'", //AND password <> 'password1'
+  function(err, result) {
+    console.log(result);
+  }
+);*/
 
+pool.query(
+  'SELECT * FROM user',
+  function(err, result) {
+    console.log(result);
+  }
+);
 
-const re = pool.query("SELECT * FROM user");
+/*const re = pool.query("SELECT * FROM user");
 console.log(re);
 
 module.exports = pool;
@@ -50,7 +69,8 @@ async function logUsers() {
   getUser(1);
 */
 // database.js
-const mysql = require('mysql2/promise');
+
+/*const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
   host: '127.0.0.1',
@@ -59,14 +79,14 @@ const pool = mysql.createPool({
   database: 'assignment'
 });
 
-async function getUserData() {
-  const [rows] = await pool.query("SELECT * FROM user");
-  console.log(rows);
-  return rows;
-}
 
 module.exports = {
   pool: pool,
   getUserData: getUserData
 };
 
+async function getUserData() {
+  const [rows] = await pool.query("SELECT * FROM user");
+  console.log(rows);
+  return rows;
+}*/
